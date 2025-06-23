@@ -1,30 +1,56 @@
-# -mall-customer-cleaning-task-
-# 🛍️ Mall Customer Segmentation – Data Cleaning (Task 1)
-
-## 🔍 Objective
-Clean and preprocess the "Mall_Customers.csv" dataset by addressing:
+#  Mall Customer Segmentation – Data Cleaning (Task 1)
+##  Objective
+Clean and prepare a raw dataset (`Mall_Customers.csv`) by addressing:
 - Missing values
-- Duplicate rows
-- Inconsistent formatting
-- Unclear column naming
+- Duplicate records
+- Inconsistent text formats
+- Incorrect data types
+- Column naming inconsistencies
 
-## 🛠 Tools Used
-- Python
-- Pandas
+
+##  Tools Used
+- Python 
+- Pandas 
 - Google Colab
 
-## 📁 Dataset Source
-- [Mall Customer Segmentation Data – Kaggle](https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python)
 
-## 🧼 Cleaning Steps
-1. Renamed columns to snake_case
-2. Removed duplicate rows using `drop_duplicates()`
-3. Filled missing values:
-   - `gender` as "unknown"
-   - `age` with mean
-   - `annual_income_(k$)` and `spending_score_(1-100)` with median
-4. Standardized text entries (lowercased gender)
-5. Exported cleaned dataset to `cleaned_mall_customers.csv`
+##  Files Included
+| File Name                  | Description                                |
+|---------------------------|--------------------------------------------|
+| `Mall_Customers.csv`      | Original dataset (raw)                     |
+| `cleaned_mall_customers.csv` | Final cleaned dataset (ready for analysis) |
+| `data_cleaning_ELabs.ipynb`  | Jupyter notebook with full cleaning steps  |
+| `README.md`               | This documentation                        |
 
-## ✅ Outcome
-Final dataset is cleaned, formatted, and ready for clustering, visualization, or modeling.
+---
+
+##  Cleaning Steps Performed
+1. **Renamed columns** to `snake_case` (e.g., `CustomerID` → `customer_id`)
+2. **Removed duplicates** using `.drop_duplicates()`
+3. **Handled missing values**:
+   - `gender` filled with `'unknown'`
+   - Numerical fields filled using mean/median
+4. **Standardized text values** (lowercased and stripped whitespace in `gender`)
+5. **Fixed data types**:
+   - Converted `customer_id`, `age`, `annual_income_(k$)`, and `spending_score_(1-100)` to `int`
+6. **Exported clean dataset** to `cleaned_mall_customers.csv`
+
+---
+
+##  Outcome
+The cleaned dataset is now ready for:
+- Segmentation modeling
+- Customer behavior analysis
+- Visual storytelling or dashboards
+
+
+##  Preview
+
+| customer_id | gender  | age | annual_income_(k$) | spending_score_(1-100) |
+|-------------|---------|-----|--------------------|-------------------------|
+| 1           | male    | 19  | 15                 | 39                      |
+| 2           | male    | 21  | 15                 | 81                      |
+| 3           | female  | 20  | 16                 | 6                       |
+
+
+
